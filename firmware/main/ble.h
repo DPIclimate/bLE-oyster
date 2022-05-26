@@ -13,6 +13,7 @@ typedef struct {
 	BLEDfu *service; ///< Over the air firmware update
 	BLEUart *uart; ///< UART over bluetooth
 	BLEDis *device_info; ///< Device information 
+	BLEBas *battery_status; ///< Battery status
 	uint8_t num_connections; ///< Number of concurrent connections
 	// Valid TX power settings: -40dBm, -20dBm, -16dBm, -12dBm, -8dBm, -4dBm, 
 	// 0dBm, +2dBm, +3dBm, +4dBm, +5dBm, +6dBm, +7dBm and +8dBm.	
@@ -24,10 +25,10 @@ typedef enum {
 	BT_ERROR = 	0x01
 } Bluetooth_StatusTypeDef;
 
-void BluetoothInit(Bluetooth_TypeDef * _bt);
-void BluetoothConnectCallback(uint16_t conn_handle);
-void BluetoothDisconnectCallback(uint16_t conn_handle, uint8_t reason);
-void BluetoothRxCallback(uint16_t conn_handle);
-void BluetoothStartAdvertising();
+void Bluetooth_Init();
+void Bluetooth_ConnectCallback(uint16_t conn_handle);
+void Bluetooth_DisconnectCallback(uint16_t conn_handle, uint8_t reason);
+void Bluetooth_RxCallback(uint16_t conn_handle);
+void Bluetooth_StartAdvertising();
 
 #endif // BLE_H_

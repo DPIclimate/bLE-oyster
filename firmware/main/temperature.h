@@ -9,12 +9,7 @@
 
 #include "config.h"
 
-typedef enum {
-	TEMP_OK = 		0x00,
-	TEMP_ERROR = 	0x01,
-} Temperature_StatusTypeDef;
-
-Temperature_StatusTypeDef TemperatureInit();
-float TemperatureRead();
+void Temperature_Init();
+float Temperature_Read();
 
 #endif // TEMPERATURE_H_

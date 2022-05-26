@@ -7,30 +7,38 @@ Adafruit_MCP9808 temp_sensor = Adafruit_MCP9808();
  * Default address for the I2C device is 0x18
  * @returns Temperature_StatusTypeDef Error codes for temperature sensor.
  */
-Temperature_StatusTypeDef TemperatureInit() {
-	if(!temp_sensor.begin(MCP9808_ADDR)){
+void Temperature_Init() {
+	#ifdef DEBUG
+		Serial.print("Initialising temperature sensor...");
+	#endif
+	if (!temp_sensor.begin(MCP9808_ADDR)) {
 		#ifdef DEBUG
-			Serial.println("Temperature sensor unavailable.");
+			Serial.println("sensor not found. Stopping.");
 		#endif
-		return TEMP_ERROR;
+		while (1); // Stop execution. TODO should trigger watchdog.
 	}
+	#ifdef DEBUG
+		Serial.println("done.");
+	#endif
+
 	temp_sensor.setResolution(3); // 0.0625 °C
-	return TEMP_OK;
 }
 
 /**
  * Read temperature from MCP9808 in degrees Celcius.
  * @returns t The temperature in degrees celcius.
  */
-float TemperatureRead() {
+float Temperature_Read() {
 	temp_sensor.wake();
 	float t = temp_sensor.readTempC();
 	temp_sensor.shutdown_wake(1); // Sleep mode until wake
 
+
 	#ifdef DEBUG
 		Serial.print("MCP9808 Temperature = ");
 		Serial.print(t, 1);
-		Serial.println(" °C");
+		Serial.print(" \xC2\xB0");
+		Serial.println("C");
 	#endif
 
 	return t;
