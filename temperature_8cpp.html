@@ -93,68 +93,161 @@ $(document).ready(function(){initNavTree('temperature_8cpp.html',''); initResiza
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for temperature.cpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="temperature_8cpp__incl.svg" width="459" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="temperature_8cpp__incl.svg" width="755" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a7476a6574f6afc26224f57949f80ec03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="temperature_8cpp.html#a7476a6574f6afc26224f57949f80ec03">Temperature_Init</a> ()</td></tr>
-<tr class="separator:a7476a6574f6afc26224f57949f80ec03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae122e772cd19ed22d929bf9fa7856b60"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="temperature_8cpp.html#ae122e772cd19ed22d929bf9fa7856b60">Temperature_Read</a> ()</td></tr>
-<tr class="separator:ae122e772cd19ed22d929bf9fa7856b60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1a2763172aa6c32a04bf9ff11fc3bdd"><td class="memItemLeft" align="right" valign="top">OneWire&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="temperature_8cpp.html#aa1a2763172aa6c32a04bf9ff11fc3bdd">oneWire</a> (<a class="el" href="temperature_8h.html#a92594f3a857d49963047c5e5064c796b">ONEWIRE_BUS</a>)</td></tr>
+<tr class="separator:aa1a2763172aa6c32a04bf9ff11fc3bdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e8e09c1e176344b10e3ac0aeb704e1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="temperature_8cpp.html#a3e8e09c1e176344b10e3ac0aeb704e1a">MCP9808_Init</a> ()</td></tr>
+<tr class="memdesc:a3e8e09c1e176344b10e3ac0aeb704e1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise MCP9808 temperature sensor.  <a href="temperature_8cpp.html#a3e8e09c1e176344b10e3ac0aeb704e1a">More...</a><br /></td></tr>
+<tr class="separator:a3e8e09c1e176344b10e3ac0aeb704e1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74bfae904ba8b6e1243a252954f25536"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="temperature_8cpp.html#a74bfae904ba8b6e1243a252954f25536">MCP9808_Read</a> ()</td></tr>
+<tr class="memdesc:a74bfae904ba8b6e1243a252954f25536"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read temperature in deg C from MCP9808.  <a href="temperature_8cpp.html#a74bfae904ba8b6e1243a252954f25536">More...</a><br /></td></tr>
+<tr class="separator:a74bfae904ba8b6e1243a252954f25536"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b3ff9aafdf94552509203c54ba7e330"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="temperature_8cpp.html#a8b3ff9aafdf94552509203c54ba7e330">DS18B20_Init</a> ()</td></tr>
+<tr class="memdesc:a8b3ff9aafdf94552509203c54ba7e330"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise OneWire DS18B20 temperature sensor.  <a href="temperature_8cpp.html#a8b3ff9aafdf94552509203c54ba7e330">More...</a><br /></td></tr>
+<tr class="separator:a8b3ff9aafdf94552509203c54ba7e330"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a074544d48943f5bacee23cea47fde2d5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="temperature_8cpp.html#a074544d48943f5bacee23cea47fde2d5">DS18B20_Read</a> ()</td></tr>
+<tr class="memdesc:a074544d48943f5bacee23cea47fde2d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read temperature in deg C from DS18B20.  <a href="temperature_8cpp.html#a074544d48943f5bacee23cea47fde2d5">More...</a><br /></td></tr>
+<tr class="separator:a074544d48943f5bacee23cea47fde2d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a329136881c2b456ee35c7b48d4750050"><td class="memItemLeft" align="right" valign="top">Adafruit_MCP9808&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="temperature_8cpp.html#a329136881c2b456ee35c7b48d4750050">temp_sensor</a> = Adafruit_MCP9808()</td></tr>
-<tr class="separator:a329136881c2b456ee35c7b48d4750050"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a055798a636c85b32fd857cc88e8fd0b4"><td class="memItemLeft" align="right" valign="top">Adafruit_MCP9808&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="temperature_8cpp.html#a055798a636c85b32fd857cc88e8fd0b4">mcp9080</a> = Adafruit_MCP9808()</td></tr>
+<tr class="separator:a055798a636c85b32fd857cc88e8fd0b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff9732d4c61546766a3a73295a930b6d"><td class="memItemLeft" align="right" valign="top">DallasTemperature ds18b20 &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="temperature_8cpp.html#aff9732d4c61546766a3a73295a930b6d">oneWire</a></td></tr>
+<tr class="separator:aff9732d4c61546766a3a73295a930b6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a7476a6574f6afc26224f57949f80ec03" name="a7476a6574f6afc26224f57949f80ec03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7476a6574f6afc26224f57949f80ec03">&#9670;&nbsp;</a></span>Temperature_Init()</h2>
+<a id="a8b3ff9aafdf94552509203c54ba7e330" name="a8b3ff9aafdf94552509203c54ba7e330"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b3ff9aafdf94552509203c54ba7e330">&#9670;&nbsp;</a></span>DS18B20_Init()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Temperature_Init </td>
+          <td class="memname">void DS18B20_Init </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Initialise MCP9808 temperature sensor. Default address for the I2C device is 0x18 </p><dl class="section return"><dt>Returns</dt><dd>Temperature_StatusTypeDef Error codes for temperature sensor. </dd></dl>
+
+<p>Initialise OneWire DS18B20 temperature sensor. </p>
+<p >Initialise DS18B20 temperature sensor.</p>
+<p >This temperature sensor uses a OneWire interface. </p>
+<p >&lt; Returns void (no error handling)</p>
 
 </div>
 </div>
-<a id="ae122e772cd19ed22d929bf9fa7856b60" name="ae122e772cd19ed22d929bf9fa7856b60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae122e772cd19ed22d929bf9fa7856b60">&#9670;&nbsp;</a></span>Temperature_Read()</h2>
+<a id="a074544d48943f5bacee23cea47fde2d5" name="a074544d48943f5bacee23cea47fde2d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a074544d48943f5bacee23cea47fde2d5">&#9670;&nbsp;</a></span>DS18B20_Read()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">float Temperature_Read </td>
+          <td class="memname">float DS18B20_Read </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Read temperature from MCP9808 in degrees Celcius. </p><dl class="section return"><dt>Returns</dt><dd>t The temperature in degrees celcius. </dd></dl>
+
+<p>Read temperature in deg C from DS18B20. </p>
+<p >Read temperature from DS18B20 in degrees Celcius.</p>
+<dl class="section return"><dt>Returns</dt><dd>t The temperature in degrees celcius. </dd></dl>
+
+</div>
+</div>
+<a id="a3e8e09c1e176344b10e3ac0aeb704e1a" name="a3e8e09c1e176344b10e3ac0aeb704e1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e8e09c1e176344b10e3ac0aeb704e1a">&#9670;&nbsp;</a></span>MCP9808_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MCP9808_Init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialise MCP9808 temperature sensor. </p>
+<p >Initialise MCP9808 temperature sensor.</p>
+<p >Default address for this I2C device is 0x18. </p>
+
+</div>
+</div>
+<a id="a74bfae904ba8b6e1243a252954f25536" name="a74bfae904ba8b6e1243a252954f25536"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74bfae904ba8b6e1243a252954f25536">&#9670;&nbsp;</a></span>MCP9808_Read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float MCP9808_Read </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read temperature in deg C from MCP9808. </p>
+<p >Read temperature from MCP9808 in degrees Celcius.</p>
+<dl class="section return"><dt>Returns</dt><dd>t The temperature in degrees celcius. </dd></dl>
+
+</div>
+</div>
+<a id="aa1a2763172aa6c32a04bf9ff11fc3bdd" name="aa1a2763172aa6c32a04bf9ff11fc3bdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1a2763172aa6c32a04bf9ff11fc3bdd">&#9670;&nbsp;</a></span>oneWire()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">OneWire oneWire </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="temperature_8h.html#a92594f3a857d49963047c5e5064c796b">ONEWIRE_BUS</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a329136881c2b456ee35c7b48d4750050" name="a329136881c2b456ee35c7b48d4750050"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a329136881c2b456ee35c7b48d4750050">&#9670;&nbsp;</a></span>temp_sensor</h2>
+<a id="a055798a636c85b32fd857cc88e8fd0b4" name="a055798a636c85b32fd857cc88e8fd0b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a055798a636c85b32fd857cc88e8fd0b4">&#9670;&nbsp;</a></span>mcp9080</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Adafruit_MCP9808 temp_sensor = Adafruit_MCP9808()</td>
+          <td class="memname">Adafruit_MCP9808 mcp9080 = Adafruit_MCP9808()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aff9732d4c61546766a3a73295a930b6d" name="aff9732d4c61546766a3a73295a930b6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff9732d4c61546766a3a73295a930b6d">&#9670;&nbsp;</a></span>oneWire</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DallasTemperature ds18b20&amp; oneWire</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['imu_5finit_0',['IMU_Init',['../imu_8cpp.html#adb25f6dac3b60011603646bf86d18b16',1,'IMU_Init():&#160;imu.cpp'],['../imu_8h.html#adb25f6dac3b60011603646bf86d18b16',1,'IMU_Init():&#160;imu.cpp']]],
-  ['imu_5freadall_1',['IMU_ReadAll',['../imu_8cpp.html#a6d47042594ab1c2260dad45d8b1d2fb3',1,'IMU_ReadAll(sensors_event_t *a, sensors_event_t *g, sensors_event_t *t):&#160;imu.cpp'],['../imu_8h.html#a6d47042594ab1c2260dad45d8b1d2fb3',1,'IMU_ReadAll(sensors_event_t *a, sensors_event_t *g, sensors_event_t *t):&#160;imu.cpp']]]
+  ['ds18b20_5finit_0',['DS18B20_Init',['../temperature_8cpp.html#a8b3ff9aafdf94552509203c54ba7e330',1,'DS18B20_Init():&#160;temperature.cpp'],['../temperature_8h.html#a8b3ff9aafdf94552509203c54ba7e330',1,'DS18B20_Init():&#160;temperature.cpp']]],
+  ['ds18b20_5fread_1',['DS18B20_Read',['../temperature_8cpp.html#a074544d48943f5bacee23cea47fde2d5',1,'DS18B20_Read():&#160;temperature.cpp'],['../temperature_8h.html#a074544d48943f5bacee23cea47fde2d5',1,'DS18B20_Read():&#160;temperature.cpp']]]
 ];

@@ -101,6 +101,14 @@ This graph shows which files directly or indirectly include this file:</div>
 Macros</h2></td></tr>
 <tr class="memitem:ad72dbcf6d0153db1b8d8a58001feed83"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a></td></tr>
 <tr class="separator:ad72dbcf6d0153db1b8d8a58001feed83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1f725205fb41df71f263324446af858"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#ad1f725205fb41df71f263324446af858">USE_DS18B20</a></td></tr>
+<tr class="separator:ad1f725205fb41df71f263324446af858"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b7d32f16c1d91470d2f97fa580203cf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a5b7d32f16c1d91470d2f97fa580203cf">USE_MCP9808</a></td></tr>
+<tr class="separator:a5b7d32f16c1d91470d2f97fa580203cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0953f6f4a733bf10239323b83bf5bb1a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a0953f6f4a733bf10239323b83bf5bb1a">DISABLE_MPU6050_GYROSCOPE</a></td></tr>
+<tr class="separator:a0953f6f4a733bf10239323b83bf5bb1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a095efbde8931907279ab5346e25be195"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a095efbde8931907279ab5346e25be195">DISABLE_MPU6050_TEMPERATURE</a></td></tr>
+<tr class="separator:a095efbde8931907279ab5346e25be195"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ad72dbcf6d0153db1b8d8a58001feed83" name="ad72dbcf6d0153db1b8d8a58001feed83"></a>
@@ -115,6 +123,66 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p >DEBUG mode. Comment out if not needed. </p>
+
+</div>
+</div>
+<a id="a0953f6f4a733bf10239323b83bf5bb1a" name="a0953f6f4a733bf10239323b83bf5bb1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0953f6f4a733bf10239323b83bf5bb1a">&#9670;&nbsp;</a></span>DISABLE_MPU6050_GYROSCOPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DISABLE_MPU6050_GYROSCOPE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >DISABLE Gyroscope in MPU6050. Comment out to enable. WARNING! Miniumum operatiing current of 3.6 mA </p>
+
+</div>
+</div>
+<a id="a095efbde8931907279ab5346e25be195" name="a095efbde8931907279ab5346e25be195"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a095efbde8931907279ab5346e25be195">&#9670;&nbsp;</a></span>DISABLE_MPU6050_TEMPERATURE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DISABLE_MPU6050_TEMPERATURE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >DISABLE temperature sensor in MPU6050. Comment out to enable. </p>
+
+</div>
+</div>
+<a id="ad1f725205fb41df71f263324446af858" name="ad1f725205fb41df71f263324446af858"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1f725205fb41df71f263324446af858">&#9670;&nbsp;</a></span>USE_DS18B20</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define USE_DS18B20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Use DS18B20 temperature sensor Comment out if not using </p>
+
+</div>
+</div>
+<a id="a5b7d32f16c1d91470d2f97fa580203cf" name="a5b7d32f16c1d91470d2f97fa580203cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b7d32f16c1d91470d2f97fa580203cf">&#9670;&nbsp;</a></span>USE_MCP9808</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define USE_MCP9808</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Use MCP9808 temperature sensor Comment out if not using </p>
 
 </div>
 </div>

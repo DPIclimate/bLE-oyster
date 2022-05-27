@@ -113,12 +113,16 @@ Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a9c36e58e7cf416f2523d2efa8eaacc83"><td class="memItemLeft" align="right" valign="top">BLEDfu&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ble_8cpp.html#a9c36e58e7cf416f2523d2efa8eaacc83">bledfu</a></td></tr>
+<tr class="memdesc:a9c36e58e7cf416f2523d2efa8eaacc83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Over the air updates.  <a href="ble_8cpp.html#a9c36e58e7cf416f2523d2efa8eaacc83">More...</a><br /></td></tr>
 <tr class="separator:a9c36e58e7cf416f2523d2efa8eaacc83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55c3cae0ee06940349d88365ef3f46c3"><td class="memItemLeft" align="right" valign="top">BLEUart&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ble_8cpp.html#a55c3cae0ee06940349d88365ef3f46c3">bleuart</a></td></tr>
+<tr class="memdesc:a55c3cae0ee06940349d88365ef3f46c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bluetooth UART.  <a href="ble_8cpp.html#a55c3cae0ee06940349d88365ef3f46c3">More...</a><br /></td></tr>
 <tr class="separator:a55c3cae0ee06940349d88365ef3f46c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3df856729b3af3070dfca595f9accd4"><td class="memItemLeft" align="right" valign="top">BLEDis&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ble_8cpp.html#ab3df856729b3af3070dfca595f9accd4">bledis</a></td></tr>
+<tr class="memdesc:ab3df856729b3af3070dfca595f9accd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device information.  <a href="ble_8cpp.html#ab3df856729b3af3070dfca595f9accd4">More...</a><br /></td></tr>
 <tr class="separator:ab3df856729b3af3070dfca595f9accd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af29527d634dcee290fa1ef384d2dadf9"><td class="memItemLeft" align="right" valign="top">BLEBas&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ble_8cpp.html#af29527d634dcee290fa1ef384d2dadf9">blebas</a></td></tr>
+<tr class="memdesc:af29527d634dcee290fa1ef384d2dadf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device battery status.  <a href="ble_8cpp.html#af29527d634dcee290fa1ef384d2dadf9">More...</a><br /></td></tr>
 <tr class="separator:af29527d634dcee290fa1ef384d2dadf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61e499ab5954656afdc350d620dda8e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_bluetooth___type_def.html">Bluetooth_TypeDef</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ble_8cpp.html#a61e499ab5954656afdc350d620dda8e7">bt</a></td></tr>
 <tr class="separator:a61e499ab5954656afdc350d620dda8e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,7 +143,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Callback event to handle connections over bluetooth. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >Callback event to handle connections over bluetooth.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">conn_handle</td><td>Bluetooth connection handler. </td></tr>
   </table>
@@ -173,7 +178,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Callback event to handle bluetooth disconnections. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >Callback event to handle bluetooth disconnections.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">conn_handle</td><td>Bluetooth connection handler. </td></tr>
     <tr><td class="paramname">reason</td><td>Represents disconnection type. </td></tr>
@@ -197,7 +203,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Initialise bluetooth communicaitons. </p>
+<p >Initialise bluetooth communicaitons.</p>
+<p >Setup over the air (OTA) firmware updates, bluetooth UART, device information (name, manufactuer etc.) and battery status. Also adjustable here is the TX communications power and the max number for concurrent bluetooth connections. </p>
 
 </div>
 </div>
@@ -216,7 +223,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Callback event for handling messages from bluetooth devices. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >Callback event for handling messages from bluetooth devices.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">central_uart</td><td>BLE UART client handler. </td></tr>
   </table>
@@ -257,6 +265,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Device battery status. </p>
+
 </div>
 </div>
 <a id="a9c36e58e7cf416f2523d2efa8eaacc83" name="a9c36e58e7cf416f2523d2efa8eaacc83"></a>
@@ -270,6 +280,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Over the air updates. </p>
 
 </div>
 </div>
@@ -285,6 +297,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Device information. </p>
+
 </div>
 </div>
 <a id="a55c3cae0ee06940349d88365ef3f46c3" name="a55c3cae0ee06940349d88365ef3f46c3"></a>
@@ -298,6 +312,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Bluetooth UART. </p>
 
 </div>
 </div>
@@ -319,11 +335,12 @@ Variables</h2></td></tr>
 <div class="line">    .battery_status = &amp;<a class="code hl_variable" href="ble_8cpp.html#af29527d634dcee290fa1ef384d2dadf9">blebas</a>,</div>
 <div class="line">    .num_connections = 1,</div>
 <div class="line">    .tx_power = 4, </div>
+<div class="line">    .connection_timeout = 120, </div>
 <div class="line">}</div>
-<div class="ttc" id="able_8cpp_html_a55c3cae0ee06940349d88365ef3f46c3"><div class="ttname"><a href="ble_8cpp.html#a55c3cae0ee06940349d88365ef3f46c3">bleuart</a></div><div class="ttdeci">BLEUart bleuart</div><div class="ttdef"><b>Definition:</b> ble.cpp:4</div></div>
-<div class="ttc" id="able_8cpp_html_a9c36e58e7cf416f2523d2efa8eaacc83"><div class="ttname"><a href="ble_8cpp.html#a9c36e58e7cf416f2523d2efa8eaacc83">bledfu</a></div><div class="ttdeci">BLEDfu bledfu</div><div class="ttdef"><b>Definition:</b> ble.cpp:3</div></div>
-<div class="ttc" id="able_8cpp_html_ab3df856729b3af3070dfca595f9accd4"><div class="ttname"><a href="ble_8cpp.html#ab3df856729b3af3070dfca595f9accd4">bledis</a></div><div class="ttdeci">BLEDis bledis</div><div class="ttdef"><b>Definition:</b> ble.cpp:5</div></div>
-<div class="ttc" id="able_8cpp_html_af29527d634dcee290fa1ef384d2dadf9"><div class="ttname"><a href="ble_8cpp.html#af29527d634dcee290fa1ef384d2dadf9">blebas</a></div><div class="ttdeci">BLEBas blebas</div><div class="ttdef"><b>Definition:</b> ble.cpp:6</div></div>
+<div class="ttc" id="able_8cpp_html_a55c3cae0ee06940349d88365ef3f46c3"><div class="ttname"><a href="ble_8cpp.html#a55c3cae0ee06940349d88365ef3f46c3">bleuart</a></div><div class="ttdeci">BLEUart bleuart</div><div class="ttdoc">Bluetooth UART.</div><div class="ttdef"><b>Definition:</b> ble.cpp:4</div></div>
+<div class="ttc" id="able_8cpp_html_a9c36e58e7cf416f2523d2efa8eaacc83"><div class="ttname"><a href="ble_8cpp.html#a9c36e58e7cf416f2523d2efa8eaacc83">bledfu</a></div><div class="ttdeci">BLEDfu bledfu</div><div class="ttdoc">Over the air updates.</div><div class="ttdef"><b>Definition:</b> ble.cpp:3</div></div>
+<div class="ttc" id="able_8cpp_html_ab3df856729b3af3070dfca595f9accd4"><div class="ttname"><a href="ble_8cpp.html#ab3df856729b3af3070dfca595f9accd4">bledis</a></div><div class="ttdeci">BLEDis bledis</div><div class="ttdoc">Device information.</div><div class="ttdef"><b>Definition:</b> ble.cpp:5</div></div>
+<div class="ttc" id="able_8cpp_html_af29527d634dcee290fa1ef384d2dadf9"><div class="ttname"><a href="ble_8cpp.html#af29527d634dcee290fa1ef384d2dadf9">blebas</a></div><div class="ttdeci">BLEBas blebas</div><div class="ttdoc">Device battery status.</div><div class="ttdef"><b>Definition:</b> ble.cpp:6</div></div>
 </div><!-- fragment -->
 </div>
 </div>

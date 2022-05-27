@@ -161,7 +161,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >Read all sensors on IMU. </p><dl class="params"><dt>Parameters</dt><dd>
+<p >Read all sensors on IMU. Only really used for debugging.</p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">a</td><td>Accelerometer sensor. </td></tr>
     <tr><td class="paramname">g</td><td>Gyroscope sensor. </td></tr>
@@ -187,16 +188,16 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">    .mpu6050 = &amp;<a class="code hl_variable" href="imu_8cpp.html#af506c0687ac519b8c73c5fc416ed3698">mpu6050</a>,</div>
 <div class="line">    .frame_sync = MPU6050_FSYNC_OUT_DISABLED,</div>
-<div class="line">    .clock_select = MPU6050_PLL_GYROX,</div>
+<div class="line">    .clock_select = MPU6050_INTR_8MHz,</div>
 <div class="line">    .accel_range = MPU6050_RANGE_2_G,</div>
 <div class="line">    .gyro_range = MPU6050_RANGE_500_DEG,</div>
 <div class="line">    .bandwidth = MPU6050_BAND_260_HZ,</div>
-<div class="line">    .highpass_filter = MPU6050_HIGHPASS_DISABLE,</div>
-<div class="line">    .cycle_rate = MPU6050_CYCLE_1_25_HZ,</div>
+<div class="line">    .highpass_filter = MPU6050_HIGHPASS_0_63_HZ,</div>
+<div class="line">    .cycle_rate = MPU6050_CYCLE_1_25_HZ, </div>
 <div class="line">    .addr = <a class="code hl_define" href="imu_8h.html#ab9035108de2c4e7fc2fddbbfaed6976f">DEFAULT_MPU6050_ADDR</a>,</div>
 <div class="line">}</div>
 <div class="ttc" id="aimu_8cpp_html_af506c0687ac519b8c73c5fc416ed3698"><div class="ttname"><a href="imu_8cpp.html#af506c0687ac519b8c73c5fc416ed3698">mpu6050</a></div><div class="ttdeci">Adafruit_MPU6050 mpu6050</div><div class="ttdef"><b>Definition:</b> imu.cpp:3</div></div>
-<div class="ttc" id="aimu_8h_html_ab9035108de2c4e7fc2fddbbfaed6976f"><div class="ttname"><a href="imu_8h.html#ab9035108de2c4e7fc2fddbbfaed6976f">DEFAULT_MPU6050_ADDR</a></div><div class="ttdeci">#define DEFAULT_MPU6050_ADDR</div><div class="ttdef"><b>Definition:</b> imu.h:10</div></div>
+<div class="ttc" id="aimu_8h_html_ab9035108de2c4e7fc2fddbbfaed6976f"><div class="ttname"><a href="imu_8h.html#ab9035108de2c4e7fc2fddbbfaed6976f">DEFAULT_MPU6050_ADDR</a></div><div class="ttdeci">#define DEFAULT_MPU6050_ADDR</div><div class="ttdoc">Default I2C address of MPU6050.</div><div class="ttdef"><b>Definition:</b> imu.h:10</div></div>
 </div><!-- fragment -->
 </div>
 </div>
