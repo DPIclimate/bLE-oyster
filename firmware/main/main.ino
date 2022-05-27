@@ -16,15 +16,15 @@ void setup() {
 	Bluetooth_Init();
 
 	///< Setup temperature monitoring (MCP9808)
-	Temperature_Init();
+	#ifdef USE_MCP9808
+		MCP9808_Init();
+	#endif
 
 	///< Setup IMU (gyro / accelerometer)
 	IMU_Init();
-
 }
 
 void loop() {
-	Temperature_Read();
 	IMU_ReadAll(&a, &g, &t);
 	delay(500);
 }

@@ -9,6 +9,18 @@
 
 #include "config.h"
 
+/**
+ * Bluetooth handler.
+ *
+ * Allows for the setup of bluetooth specific services. 
+ * - OTA firmware updates
+ * - UART over bluetooth
+ * - Device information
+ * - Battery status
+ *
+ * Also provided are options for TX power (may need to be adjusted) and 
+ * the maxiumum number for concurrent connections over bluetooth.
+ */
 typedef struct {
 	BLEDfu *service; ///< Over the air firmware update
 	BLEUart *uart; ///< UART over bluetooth
@@ -18,12 +30,8 @@ typedef struct {
 	// Valid TX power settings: -40dBm, -20dBm, -16dBm, -12dBm, -8dBm, -4dBm, 
 	// 0dBm, +2dBm, +3dBm, +4dBm, +5dBm, +6dBm, +7dBm and +8dBm.	
 	int8_t tx_power;
+	uint16_t connection_timeout; ///< Timeout in seconds
 } Bluetooth_TypeDef;
-
-typedef enum {
-	BT_OK = 	0x00,
-	BT_ERROR = 	0x01
-} Bluetooth_StatusTypeDef;
 
 void Bluetooth_Init();
 void Bluetooth_ConnectCallback(uint16_t conn_handle);

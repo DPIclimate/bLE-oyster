@@ -7,8 +7,11 @@
 
 #include "config.h"
 
-#define DEFAULT_MPU6050_ADDR 0x68
+#define DEFAULT_MPU6050_ADDR 0x68 ///< Default I2C address of MPU6050
 
+/**
+ * Handles IMU settings and objects.
+ */
 typedef struct {
 	Adafruit_MPU6050 *mpu6050;
 	mpu6050_fsync_out_t frame_sync;

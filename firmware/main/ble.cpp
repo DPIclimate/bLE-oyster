@@ -1,9 +1,9 @@
 #include "ble.h"
 
-BLEDfu bledfu;
-BLEUart bleuart;
-BLEDis bledis;
-BLEBas blebas;
+BLEDfu bledfu; ///< Over the air updates
+BLEUart bleuart; ///< Bluetooth UART
+BLEDis bledis; ///< Device information
+BLEBas blebas; ///< Device battery status
 
 Bluetooth_TypeDef bt = {
 	.service = &bledfu,
@@ -12,10 +12,16 @@ Bluetooth_TypeDef bt = {
 	.battery_status = &blebas,
 	.num_connections = 1,
 	.tx_power = 4, // dB
+	.connection_timeout = 120, // seconds
 };
 
 /**
  * Initialise bluetooth communicaitons.
+ *
+ * Setup over the air (OTA) firmware updates, bluetooth UART, device
+ * information (name, manufactuer etc.) and battery status. Also adjustable
+ * here is the TX communications power and the max number for concurrent
+ * bluetooth connections.
  */
 void Bluetooth_Init(){
 
@@ -68,11 +74,14 @@ void Bluetooth_StartAdvertising() {
 	Bluefruit.Advertising.restartOnDisconnect(true);
 	Bluefruit.Advertising.setInterval(32, 244); 
 	Bluefruit.Advertising.setFastTimeout(30); 
-	Bluefruit.Advertising.start(0); 
+
+	// Start searching with timeout
+	Bluefruit.Advertising.start(bt.connection_timeout); 
 }
 
 /**
  * Callback event to handle connections over bluetooth.
+ *
  * @param conn_handle Bluetooth connection handler.
  */
 void Bluetooth_ConnectCallback(uint16_t conn_handle) {
@@ -87,6 +96,7 @@ void Bluetooth_ConnectCallback(uint16_t conn_handle) {
 
 /**
  * Callback event to handle bluetooth disconnections.
+ *
  * @param conn_handle Bluetooth connection handler.
  * @param reason Represents disconnection type.
  */
@@ -101,6 +111,7 @@ void Bluetooth_DisconnectCallback(uint16_t conn_handle, uint8_t reason) {
 
 /**
  * Callback event for handling messages from bluetooth devices.
+ *
  * @param central_uart BLE UART client handler.
  */
 void Bluetooth_RxCallback(uint16_t conn_handle) {
