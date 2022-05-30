@@ -84,6 +84,7 @@ $(document).ready(function(){initNavTree('temperature_8h.html',''); initResizabl
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">temperature.h File Reference</div></div>
@@ -93,33 +94,30 @@ $(document).ready(function(){initNavTree('temperature_8h.html',''); initResizabl
 <code>#include &lt;Wire.h&gt;</code><br />
 <code>#include &lt;Adafruit_MCP9808.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="config_8h_source.html">config.h</a>&quot;</code><br />
-<code>#include &quot;OneWire.h&quot;</code><br />
-<code>#include &quot;DallasTemperature.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for temperature.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="temperature_8h__incl.svg" width="755" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="temperature_8h__incl.svg" width="459" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="temperature_8h__dep__incl.svg" width="240" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="temperature_8h__dep__incl.svg" width="426" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </div>
 <p><a href="temperature_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_temperature___type_def.html">Temperature_TypeDef</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:ac40c85df2b1c11c6b7b0789bcf90c04e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="temperature_8h.html#ac40c85df2b1c11c6b7b0789bcf90c04e">MCP9808_ADDR</a>&#160;&#160;&#160;0x18</td></tr>
 <tr class="separator:ac40c85df2b1c11c6b7b0789bcf90c04e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92594f3a857d49963047c5e5064c796b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="temperature_8h.html#a92594f3a857d49963047c5e5064c796b">ONEWIRE_BUS</a>&#160;&#160;&#160;13</td></tr>
-<tr class="memdesc:a92594f3a857d49963047c5e5064c796b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Digital pin.  <a href="temperature_8h.html#a92594f3a857d49963047c5e5064c796b">More...</a><br /></td></tr>
-<tr class="separator:a92594f3a857d49963047c5e5064c796b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2042d0bb2f483912475a0570f65887e9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="temperature_8h.html#a2042d0bb2f483912475a0570f65887e9">DS18B20_RESOLUTION</a>&#160;&#160;&#160;12</td></tr>
-<tr class="memdesc:a2042d0bb2f483912475a0570f65887e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read resolution in bits.  <a href="temperature_8h.html#a2042d0bb2f483912475a0570f65887e9">More...</a><br /></td></tr>
-<tr class="separator:a2042d0bb2f483912475a0570f65887e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -129,30 +127,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a74bfae904ba8b6e1243a252954f25536"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="temperature_8h.html#a74bfae904ba8b6e1243a252954f25536">MCP9808_Read</a> ()</td></tr>
 <tr class="memdesc:a74bfae904ba8b6e1243a252954f25536"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read temperature in deg C from MCP9808.  <a href="temperature_8h.html#a74bfae904ba8b6e1243a252954f25536">More...</a><br /></td></tr>
 <tr class="separator:a74bfae904ba8b6e1243a252954f25536"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b3ff9aafdf94552509203c54ba7e330"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="temperature_8h.html#a8b3ff9aafdf94552509203c54ba7e330">DS18B20_Init</a> ()</td></tr>
-<tr class="memdesc:a8b3ff9aafdf94552509203c54ba7e330"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise OneWire DS18B20 temperature sensor.  <a href="temperature_8h.html#a8b3ff9aafdf94552509203c54ba7e330">More...</a><br /></td></tr>
-<tr class="separator:a8b3ff9aafdf94552509203c54ba7e330"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a074544d48943f5bacee23cea47fde2d5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="temperature_8h.html#a074544d48943f5bacee23cea47fde2d5">DS18B20_Read</a> ()</td></tr>
-<tr class="memdesc:a074544d48943f5bacee23cea47fde2d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read temperature in deg C from DS18B20.  <a href="temperature_8h.html#a074544d48943f5bacee23cea47fde2d5">More...</a><br /></td></tr>
-<tr class="separator:a074544d48943f5bacee23cea47fde2d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35113411cd8bfaed5a712462c8d3cd61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="temperature_8h.html#a35113411cd8bfaed5a712462c8d3cd61">Temperature_MeasureCallback</a> (TimerHandle_t xTimerId)</td></tr>
+<tr class="separator:a35113411cd8bfaed5a712462c8d3cd61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a2042d0bb2f483912475a0570f65887e9" name="a2042d0bb2f483912475a0570f65887e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2042d0bb2f483912475a0570f65887e9">&#9670;&nbsp;</a></span>DS18B20_RESOLUTION</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define DS18B20_RESOLUTION&#160;&#160;&#160;12</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Read resolution in bits. </p>
-
-</div>
-</div>
 <a id="ac40c85df2b1c11c6b7b0789bcf90c04e" name="ac40c85df2b1c11c6b7b0789bcf90c04e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac40c85df2b1c11c6b7b0789bcf90c04e">&#9670;&nbsp;</a></span>MCP9808_ADDR</h2>
 
@@ -167,66 +145,7 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a92594f3a857d49963047c5e5064c796b" name="a92594f3a857d49963047c5e5064c796b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92594f3a857d49963047c5e5064c796b">&#9670;&nbsp;</a></span>ONEWIRE_BUS</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define ONEWIRE_BUS&#160;&#160;&#160;13</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Digital pin. </p>
-
-</div>
-</div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a8b3ff9aafdf94552509203c54ba7e330" name="a8b3ff9aafdf94552509203c54ba7e330"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b3ff9aafdf94552509203c54ba7e330">&#9670;&nbsp;</a></span>DS18B20_Init()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void DS18B20_Init </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Initialise OneWire DS18B20 temperature sensor. </p>
-<p >Initialise DS18B20 temperature sensor.</p>
-<p >This temperature sensor uses a OneWire interface. </p>
-<p >&lt; Returns void (no error handling)</p>
-
-</div>
-</div>
-<a id="a074544d48943f5bacee23cea47fde2d5" name="a074544d48943f5bacee23cea47fde2d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a074544d48943f5bacee23cea47fde2d5">&#9670;&nbsp;</a></span>DS18B20_Read()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float DS18B20_Read </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Read temperature in deg C from DS18B20. </p>
-<p >Read temperature from DS18B20 in degrees Celcius.</p>
-<dl class="section return"><dt>Returns</dt><dd>t The temperature in degrees celcius. </dd></dl>
-
-</div>
-</div>
 <a id="a3e8e09c1e176344b10e3ac0aeb704e1a" name="a3e8e09c1e176344b10e3ac0aeb704e1a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3e8e09c1e176344b10e3ac0aeb704e1a">&#9670;&nbsp;</a></span>MCP9808_Init()</h2>
 
@@ -266,6 +185,25 @@ Functions</h2></td></tr>
 <p>Read temperature in deg C from MCP9808. </p>
 <p >Read temperature from MCP9808 in degrees Celcius.</p>
 <dl class="section return"><dt>Returns</dt><dd>t The temperature in degrees celcius. </dd></dl>
+
+</div>
+</div>
+<a id="a35113411cd8bfaed5a712462c8d3cd61" name="a35113411cd8bfaed5a712462c8d3cd61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35113411cd8bfaed5a712462c8d3cd61">&#9670;&nbsp;</a></span>Temperature_MeasureCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Temperature_MeasureCallback </td>
+          <td>(</td>
+          <td class="paramtype">TimerHandle_t&#160;</td>
+          <td class="paramname"><em>xTimer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Callback to measure temperature. </p>
 
 </div>
 </div>

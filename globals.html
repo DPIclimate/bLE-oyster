@@ -94,7 +94,10 @@ $(document).ready(function(){initNavTree('globals.html',''); initResizable(); })
 <li>Bluetooth_DisconnectCallback()&#160;:&#160;<a class="el" href="ble_8cpp.html#a976701eee8aaef24470801def5bbde3c">ble.cpp</a>, <a class="el" href="ble_8h.html#a976701eee8aaef24470801def5bbde3c">ble.h</a></li>
 <li>Bluetooth_Init()&#160;:&#160;<a class="el" href="ble_8cpp.html#a7fd0fe705c9e986586f7b5c26e8641c2">ble.cpp</a>, <a class="el" href="ble_8h.html#a7fd0fe705c9e986586f7b5c26e8641c2">ble.h</a></li>
 <li>Bluetooth_RxCallback()&#160;:&#160;<a class="el" href="ble_8cpp.html#a847522fea9ba2804d2047448a82aa11e">ble.cpp</a>, <a class="el" href="ble_8h.html#a847522fea9ba2804d2047448a82aa11e">ble.h</a></li>
+<li>Bluetooth_Sleep()&#160;:&#160;<a class="el" href="ble_8cpp.html#abe0be52ee4e843635c08026acbd8f323">ble.cpp</a>, <a class="el" href="ble_8h.html#abe0be52ee4e843635c08026acbd8f323">ble.h</a></li>
 <li>Bluetooth_StartAdvertising()&#160;:&#160;<a class="el" href="ble_8cpp.html#a3316be537af9ba88eac0503af4b45cbf">ble.cpp</a>, <a class="el" href="ble_8h.html#a3316be537af9ba88eac0503af4b45cbf">ble.h</a></li>
+<li>Bluetooth_StopAdvCallback()&#160;:&#160;<a class="el" href="ble_8cpp.html#a1b535b9680499828232d3291079ace03">ble.cpp</a>, <a class="el" href="ble_8h.html#a1b535b9680499828232d3291079ace03">ble.h</a></li>
+<li>Bluetooth_Wakeup()&#160;:&#160;<a class="el" href="ble_8cpp.html#a28f51ceee7e143df6ef450296505e080">ble.cpp</a>, <a class="el" href="ble_8h.html#a28f51ceee7e143df6ef450296505e080">ble.h</a></li>
 <li>bt&#160;:&#160;<a class="el" href="ble_8cpp.html#a61e499ab5954656afdc350d620dda8e7">ble.cpp</a></li>
 </ul>
 
@@ -104,16 +107,18 @@ $(document).ready(function(){initNavTree('globals.html',''); initResizable(); })
 <li>DEFAULT_MPU6050_ADDR&#160;:&#160;<a class="el" href="imu_8h.html#ab9035108de2c4e7fc2fddbbfaed6976f">imu.h</a></li>
 <li>DISABLE_MPU6050_GYROSCOPE&#160;:&#160;<a class="el" href="config_8h.html#a0953f6f4a733bf10239323b83bf5bb1a">config.h</a></li>
 <li>DISABLE_MPU6050_TEMPERATURE&#160;:&#160;<a class="el" href="config_8h.html#a095efbde8931907279ab5346e25be195">config.h</a></li>
-<li>DS18B20_Init()&#160;:&#160;<a class="el" href="temperature_8cpp.html#a8b3ff9aafdf94552509203c54ba7e330">temperature.cpp</a>, <a class="el" href="temperature_8h.html#a8b3ff9aafdf94552509203c54ba7e330">temperature.h</a></li>
-<li>DS18B20_Read()&#160;:&#160;<a class="el" href="temperature_8cpp.html#a074544d48943f5bacee23cea47fde2d5">temperature.cpp</a>, <a class="el" href="temperature_8h.html#a074544d48943f5bacee23cea47fde2d5">temperature.h</a></li>
-<li>DS18B20_RESOLUTION&#160;:&#160;<a class="el" href="temperature_8h.html#a2042d0bb2f483912475a0570f65887e9">temperature.h</a></li>
 </ul>
 
 
 <h3><a id="index_i" name="index_i"></a>- i -</h3><ul>
 <li>imu&#160;:&#160;<a class="el" href="imu_8cpp.html#a8709fce3484e05afd3c7cb186c1a33fe">imu.cpp</a></li>
 <li>IMU_Init()&#160;:&#160;<a class="el" href="imu_8cpp.html#adb25f6dac3b60011603646bf86d18b16">imu.cpp</a>, <a class="el" href="imu_8h.html#adb25f6dac3b60011603646bf86d18b16">imu.h</a></li>
+<li>IMU_IRQ_PIN&#160;:&#160;<a class="el" href="config_8h.html#adfd3f8dd843109b9e4be70e493977d75">config.h</a></li>
 <li>IMU_ReadAll()&#160;:&#160;<a class="el" href="imu_8cpp.html#a6d47042594ab1c2260dad45d8b1d2fb3">imu.cpp</a>, <a class="el" href="imu_8h.html#a6d47042594ab1c2260dad45d8b1d2fb3">imu.h</a></li>
+<li>INTERNAL_BLUE_LED&#160;:&#160;<a class="el" href="config_8h.html#ae83cd3527d099697514b98262f8307f0">config.h</a></li>
+<li>INTERNAL_PUSH_BTN&#160;:&#160;<a class="el" href="config_8h.html#adfcf6136b8b335d7acd3e1774ae88828">config.h</a></li>
+<li>INTERNAL_RGB_LED_CLK&#160;:&#160;<a class="el" href="config_8h.html#a2cc28a232c8ddcbb99a6d17efc145769">config.h</a></li>
+<li>INTERNAL_RGB_LED_DATA&#160;:&#160;<a class="el" href="config_8h.html#a10200cf4090e1503dfe7c67a586253df">config.h</a></li>
 </ul>
 
 
@@ -128,15 +133,9 @@ $(document).ready(function(){initNavTree('globals.html',''); initResizable(); })
 </ul>
 
 
-<h3><a id="index_o" name="index_o"></a>- o -</h3><ul>
-<li>oneWire&#160;:&#160;<a class="el" href="temperature_8cpp.html#aff9732d4c61546766a3a73295a930b6d">temperature.cpp</a></li>
-<li>ONEWIRE_BUS&#160;:&#160;<a class="el" href="temperature_8h.html#a92594f3a857d49963047c5e5064c796b">temperature.h</a></li>
-</ul>
-
-
-<h3><a id="index_u" name="index_u"></a>- u -</h3><ul>
-<li>USE_DS18B20&#160;:&#160;<a class="el" href="config_8h.html#ad1f725205fb41df71f263324446af858">config.h</a></li>
-<li>USE_MCP9808&#160;:&#160;<a class="el" href="config_8h.html#a5b7d32f16c1d91470d2f97fa580203cf">config.h</a></li>
+<h3><a id="index_t" name="index_t"></a>- t -</h3><ul>
+<li>temp_connected&#160;:&#160;<a class="el" href="temperature_8cpp.html#a14bddd9e0d78698b63a4a70433f1b92e">temperature.cpp</a></li>
+<li>Temperature_MeasureCallback()&#160;:&#160;<a class="el" href="temperature_8cpp.html#affbcb6f58c9e4c61828ae6048022bd1b">temperature.cpp</a>, <a class="el" href="temperature_8h.html#a35113411cd8bfaed5a712462c8d3cd61">temperature.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
