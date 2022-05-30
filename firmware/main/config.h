@@ -8,16 +8,22 @@
 #define DEBUG
 
 /**
- * Use DS18B20 temperature sensor
- * Comment out if not using
+ * Internal pin definitions. Includes:
+ * - Blue LED
+ * - Push button
+ * - RGB LED clock line
+ * - RGB LED data line 
  */
-#define USE_DS18B20
+#define INTERNAL_BLUE_LED 		3 ///< Blue onboard lED
+#define INTERNAL_PUSH_BTN 		4 ///< Onboard push button
+#define INTERNAL_RGB_LED_CLK 	6 ///< RGB LED clock line
+#define INTERNAL_RGB_LED_DATA 	8 ///< RGB LED data line
 
 /**
- * Use MCP9808 temperature sensor
- * Comment out if not using
+ * IMU interrupt pin. 
+ * This is initialised in imu.cpp and checked in ble.cpp
  */
-#define USE_MCP9808
+#define IMU_IRQ_PIN 			12 ///< Digital interrupt pin
 
 /**
  * DISABLE Gyroscope in MPU6050.

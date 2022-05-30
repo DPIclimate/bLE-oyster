@@ -1,13 +1,7 @@
 #include "temperature.h"
 
-#ifdef USE_MCP9808
-	Adafruit_MCP9808 mcp9080 = Adafruit_MCP9808();
-#endif
-
-#ifdef USE_DS18B20
-	OneWire oneWire(ONEWIRE_BUS);
-	DallasTemperature ds18b20(&oneWire);
-#endif
+Adafruit_MCP9808 mcp9080 = Adafruit_MCP9808();
+bool temp_connected = false;
 
 /**
  * Initialise MCP9808 temperature sensor.
@@ -28,6 +22,8 @@ void MCP9808_Init() {
 		Serial.println("done.");
 	#endif
 
+	temp_connected = true;
+
 	mcp9080.setResolution(3); // 0.0625 °C
 }
 
@@ -37,13 +33,20 @@ void MCP9808_Init() {
  * @returns t The temperature in degrees celcius.
  */
 float MCP9808_Read() {
+	if(!temp_connected) {
+		#ifdef DEBUG
+			Serial.print("MCP9808 not found. Exiting.");
+		#endif
+		return 0.0;
+	}
+
 	mcp9080.wake();
 	float t = mcp9080.readTempC();
 	mcp9080.shutdown_wake(1); // Sleep mode until wake
 
 	#ifdef DEBUG
 		Serial.print("MCP9808 Temperature = ");
-		Serial.print(t, 1);
+		Serial.print(t, 2);
 		Serial.print(" \xC2\xB0");
 		Serial.println("C");
 	#endif
@@ -52,37 +55,20 @@ float MCP9808_Read() {
 }
 
 /**
- * Initialise DS18B20 temperature sensor.
- *
- * This temperature sensor uses a OneWire interface.
+ * Callback to measure temperature.
  */
-void DS18B20_Init() {
+void Temperature_MeasureCallback(TimerHandle_t xTimer){
+	(void) xTimer;
+	
 	#ifdef DEBUG
-		Serial.print("Initialising DS18B20 temperature sensor...");
+		Serial.println("Temperature callback triggered.");
 	#endif
-	ds18b20.begin(); ///< Returns void (no error handling)
-	ds18b20.setResolution(DS18B20_RESOLUTION);
-	#ifdef DEBUG
-		Serial.println("done.");
-	#endif
-}
+	if(!temp_connected){
+		#ifdef DEBUG
+			Serial.println("MCP9808 not found. Exiting callback.");
+		#endif
+		return;
+	}
 
-/**
- * Read temperature from DS18B20 in degrees Celcius.
- *
- * @returns t The temperature in degrees celcius.
- */
-float DS18B20_Read() {
-
-	ds18b20.requestTemperatures();
-	float t = ds18b20.getTempCByIndex(0);
-
-	#ifdef DEBUG
-		Serial.print("DS18B20 Temperature = ");
-		Serial.print(t, 1);
-		Serial.print(" \xC2\xB0");
-		Serial.println("C");
-	#endif
-
-	return t;
+	MCP9808_Read();
 }

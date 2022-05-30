@@ -12,7 +12,7 @@ Bluetooth_TypeDef bt = {
 	.battery_status = &blebas,
 	.num_connections = 1,
 	.tx_power = 4, // dB
-	.connection_timeout = 120, // seconds
+	.connection_timeout = 30, // seconds
 };
 
 /**
@@ -71,12 +71,25 @@ void Bluetooth_StartAdvertising() {
 	Bluefruit.Advertising.addService(*bt.uart);
 	Bluefruit.Advertising.addName(); ///< Include name in packet
 
+	// Set callback when advertising stops
+	Bluefruit.Advertising.setStopCallback(Bluetooth_StopAdvCallback);
+	
+	// Defult advertising parameters
 	Bluefruit.Advertising.restartOnDisconnect(true);
 	Bluefruit.Advertising.setInterval(32, 244); 
 	Bluefruit.Advertising.setFastTimeout(30); 
 
-	// Start searching with timeout
+	// Start advertising with timeout
 	Bluefruit.Advertising.start(bt.connection_timeout); 
+}
+
+/**
+ * Debugging callback to notify when bluetooth advertising has timed out.
+ */
+void Bluetooth_StopAdvCallback(){
+	#ifdef DEBUG
+		Serial.println("BLE advertising has timed out. Stopping service.");
+	#endif
 }
 
 /**
@@ -112,7 +125,7 @@ void Bluetooth_DisconnectCallback(uint16_t conn_handle, uint8_t reason) {
 /**
  * Callback event for handling messages from bluetooth devices.
  *
- * @param central_uart BLE UART client handler.
+ * @param conn_handler BLE connection handler.
  */
 void Bluetooth_RxCallback(uint16_t conn_handle) {
 	(void) conn_handle;
@@ -124,4 +137,31 @@ void Bluetooth_RxCallback(uint16_t conn_handle) {
 	#endif
 }
 
+void Bluetooth_Sleep(){
+	// TODO place the device in sleep mode
+	if(Bluefruit.connected(0)) {
+		// Don't sleep if device connected	
+		return;
+	}
+	#ifdef DEBUG
+		Serial.println("Bluetooth sleep.");
+	#endif
+}
+
+void Bluetooth_Wakeup(){
+	#ifdef DEBUG
+		Serial.println("Wakeup bluetooth.");
+	#endif
+	
+	if(!Bluefruit.connected() && !Bluefruit.Advertising.isRunning()){
+		#ifdef DEBUG
+			Serial.println("Restarting BLE advertising.");
+		#endif
+		Bluefruit.Advertising.start(bt.connection_timeout); 
+	} else {
+		#ifdef DEBUG
+			Serial.println("BLE advertising already running. Skipping.");
+		#endif
+	}
+}
 

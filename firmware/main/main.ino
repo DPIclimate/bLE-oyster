@@ -3,12 +3,9 @@
 #include "imu.h"
 #include "config.h"
 
-sensors_event_t a, g, t;
-
 void setup() {
-	Serial.begin(115200);
-
 	#ifdef DEBUG
+		Serial.begin(115200);
 		while(!Serial) yield();
 	#endif
 
@@ -16,16 +13,30 @@ void setup() {
 	Bluetooth_Init();
 
 	///< Setup temperature monitoring (MCP9808)
-	#ifdef USE_MCP9808
-		MCP9808_Init();
-	#endif
+	MCP9808_Init();
 
 	///< Setup IMU (gyro / accelerometer)
 	IMU_Init();
+
+	// Setup the IMU interrupt pin
+	// Attach interrupt to wakeup bluetooth on HIGH -> LOW transition
+	// ISR_DEFERRED is needed if calls are made to Bluefruit and subseqently
+	// FreeRTOS (timing issue)
+	pinMode(IMU_IRQ_PIN, INPUT_PULLUP);
+	attachInterrupt(digitalPinToInterrupt(IMU_IRQ_PIN), Bluetooth_Wakeup, 
+			ISR_DEFERRED | FALLING);
+
+	// Setup measure temperature callback
+	// pdMS_TO_TICKS max size handles uin32_t
+	// Requires suspendLoop() in main.ino
+	TimerHandle_t mt = xTimerCreate("Measure Temperature", 
+			pdMS_TO_TICKS(1000*60*2), pdTRUE, (void *)0, 
+			Temperature_MeasureCallback);
+	xTimerStart(mt, 2000);
+
+	// Loop function not needed so disable to save power
+	suspendLoop();
 }
 
-void loop() {
-	IMU_ReadAll(&a, &g, &t);
-	delay(500);
-}
+void loop() {}
 

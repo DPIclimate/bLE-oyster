@@ -8,19 +8,17 @@
 #include <Adafruit_MCP9808.h>
 
 #include "config.h"
-#ifdef USE_DS18B20
-	#define ONEWIRE_BUS 13 ///< Digital pin
-	#define DS18B20_RESOLUTION 12 ///< Read resolution in bits
-	#include "OneWire.h"
-	#include "DallasTemperature.h"
-#endif
+
+typedef struct {
+	Adafruit_MCP9808 *mcp9080;
+	bool connected;
+} Temperature_TypeDef;
 
 /* MCP9808 temperature sensor */
 void MCP9808_Init(); ///< Initialise MCP9808 temperature sensor
 float MCP9808_Read(); ///< Read temperature in deg C from MCP9808 
 
-/* DS18B20 temperature sensor */
-void DS18B20_Init(); ///< Initialise OneWire DS18B20 temperature sensor
-float DS18B20_Read(); ///< Read temperature in deg C from DS18B20
+/* Temperature Callbacks */
+void Temperature_MeasureCallback(TimerHandle_t xTimerId);
 
 #endif // TEMPERATURE_H_

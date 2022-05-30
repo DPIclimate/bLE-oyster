@@ -24,12 +24,12 @@ void IMU_Init(){
 		#ifdef DEBUG
 			Serial.println("sensor not found. Stopping.");
 		#endif
-		while(1); // Stop execution. TODO watchdog should reset MC.
+		//while(1); // Stop execution. TODO watchdog should reset MC.
 	}
 	#ifdef DEBUG
 		Serial.println("done.");
 	#endif
-	
+
 	// Initialise internal setup
 	imu.mpu6050->setFsyncSampleOutput(imu.frame_sync);
 	imu.mpu6050->setClock(imu.clock_select);
@@ -99,3 +99,5 @@ void IMU_ReadAll(sensors_event_t *a, sensors_event_t *g, sensors_event_t *t){
 		#endif
 	#endif
 }
+
+
